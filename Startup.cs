@@ -1,8 +1,8 @@
 using System;
 using System.IO;
 using System.Reflection;
-using Coflnet.Sky.Base.Models;
-using Coflnet.Sky.Base.Services;
+using Coflnet.Sky.Bazaar.Flipper.Models;
+using Coflnet.Sky.Bazaar.Flipper.Services;
 using Coflnet.Sky.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -13,7 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Prometheus;
 
-namespace Coflnet.Sky.Base;
+namespace Coflnet.Sky.Bazaar.Flipper;
 public class Startup
 {
     public Startup(IConfiguration configuration)
@@ -29,29 +29,17 @@ public class Startup
         services.AddControllers();
         services.AddSwaggerGen(c =>
         {
-            c.SwaggerDoc("v1", new OpenApiInfo { Title = "SkyBase", Version = "v1" });
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "SkyBazaarFlipper", Version = "v1" });
             // Set the comments path for the Swagger JSON and UI.
             var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
             var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
             c.IncludeXmlComments(xmlPath);
         });
 
-        // Replace with your server version and type.
-        // Use 'MariaDbServerVersion' for MariaDB.
-        // Alternatively, use 'ServerVersion.AutoDetect(connectionString)'.
-        // For common usages, see pull request #1233.
-        var serverVersion = new MariaDbServerVersion(new Version(Configuration["MARIADB_VERSION"]));
-
-        // Replace 'YourDbContext' with the name of your own DbContext derived class.
-        services.AddDbContext<BaseDbContext>(
-            dbContextOptions => dbContextOptions
-                .UseMySql(Configuration["DB_CONNECTION"], serverVersion)
-                .EnableSensitiveDataLogging() // <-- These two calls are optional but help
-                .EnableDetailedErrors()       // <-- with debugging (remove for production).
-        );
-        services.AddHostedService<BaseBackgroundService>();
+        services.AddHostedService<BazaarFlipperBackgroundService>();
         services.AddJaeger(Configuration);
-        services.AddTransient<BaseService>();
+        services.AddSingleton<BazaarFlipperService>();
+        services.AddSingleton<Bazaar.Client.Api.IBazaarApi>(new Bazaar.Client.Api.BazaarApi(Configuration["BAZAAR_BASE_URL"]));
         services.AddResponseCaching();
         services.AddResponseCompression();
     }
@@ -66,7 +54,7 @@ public class Startup
         app.UseSwagger();
         app.UseSwaggerUI(c =>
         {
-            c.SwaggerEndpoint("/swagger/v1/swagger.json", "SkyBase v1");
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "SkyBazaarFlipper v1");
             c.RoutePrefix = "api";
         });
 

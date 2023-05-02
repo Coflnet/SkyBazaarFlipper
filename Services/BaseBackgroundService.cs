@@ -1,6 +1,6 @@
 using System.Threading;
 using System.Threading.Tasks;
-using Coflnet.Sky.Base.Models;
+using Coflnet.Sky.Bazaar.Flipper.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -8,20 +8,20 @@ using Confluent.Kafka;
 using Microsoft.Extensions.Configuration;
 using System.Linq;
 using Microsoft.Extensions.Logging;
-using Coflnet.Sky.Base.Controllers;
+using Coflnet.Sky.Bazaar.Flipper.Controllers;
 using Coflnet.Sky.Core;
 
-namespace Coflnet.Sky.Base.Services;
+namespace Coflnet.Sky.Bazaar.Flipper.Services;
 
-public class BaseBackgroundService : BackgroundService
+public class BazaarFlipperBackgroundService : BackgroundService
 {
     private IServiceScopeFactory scopeFactory;
     private IConfiguration config;
-    private ILogger<BaseBackgroundService> logger;
-    private Prometheus.Counter consumeCount = Prometheus.Metrics.CreateCounter("sky_base_conume", "How many messages were consumed");
+    private ILogger<BazaarFlipperBackgroundService> logger;
+    private Prometheus.Counter consumeCount = Prometheus.Metrics.CreateCounter("sky_bazaar_flipper_conume", "How many messages were consumed");
 
-    public BaseBackgroundService(
-        IServiceScopeFactory scopeFactory, IConfiguration config, ILogger<BaseBackgroundService> logger)
+    public BazaarFlipperBackgroundService(
+        IServiceScopeFactory scopeFactory, IConfiguration config, ILogger<BazaarFlipperBackgroundService> logger)
     {
         this.scopeFactory = scopeFactory;
         this.config = config;
@@ -34,26 +34,17 @@ public class BaseBackgroundService : BackgroundService
     /// <returns></returns>
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        using var scope = scopeFactory.CreateScope();
-        var context = scope.ServiceProvider.GetRequiredService<BaseDbContext>();
-        // make sure all migrations are applied
-        await context.Database.MigrateAsync();
-
-        var flipCons = Coflnet.Kafka.KafkaConsumer.ConsumeBatch<LowPricedAuction>(config, config["TOPICS:LOW_PRICED"], async batch =>
+        var flipCons = Coflnet.Kafka.KafkaConsumer.ConsumeBatch<dev.BazaarPull>(config, config["TOPICS:BAZAAR"], async batch =>
         {
-            var service = GetService();
+            using var scope = scopeFactory.CreateScope();
+            var service = scope.ServiceProvider.GetRequiredService<BazaarFlipperService>();
             foreach (var lp in batch)
             {
-                // do something
+                await service.BazaarUpdate(lp);
             }
             consumeCount.Inc(batch.Count());
-        }, stoppingToken, "skybase");
+        }, stoppingToken, "sky-bazaar-flipper");
 
         await Task.WhenAll(flipCons);
-    }
-
-    private BaseService GetService()
-    {
-        return scopeFactory.CreateScope().ServiceProvider.GetRequiredService<BaseService>();
     }
 }

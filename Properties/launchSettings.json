@@ -9,12 +9,12 @@
         }
     },
     "profiles": {
-        "SkyAuctionBase": {
+        "SkyAuctionBazaarFlipper": {
             "commandName": "Project",
             "dotnetRunMessages": "true",
             "launchBrowser": true,
             "launchUrl": "api",
-            "applicationUrl": "http://localhost:5030",
+            "applicationUrl": "http://localhost:5033",
             "environmentVariables": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             }

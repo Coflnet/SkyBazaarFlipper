@@ -1,27 +1,53 @@
 using System.Threading.Tasks;
-using Coflnet.Sky.Base.Models;
+using Coflnet.Sky.Bazaar.Flipper.Models;
 using System;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
+using dev;
+using Coflnet.Sky.Bazaar.Client.Api;
+using System.Collections.Generic;
 
-namespace Coflnet.Sky.Base.Services;
-public class BaseService
+namespace Coflnet.Sky.Bazaar.Flipper.Services;
+public class BazaarFlipperService
 {
-    private BaseDbContext db;
+    private IBazaarApi client;
 
-    public BaseService(BaseDbContext db)
+    public BazaarFlipperService(IBazaarApi client)
     {
-        this.db = db;
+        this.client = client;
     }
 
-    public async Task<Flip> AddFlip(Flip flip)
+    /// <summary>
+    /// Gets called whenever new bazaar data is available
+    /// Should finish within 10 seconds to be called with the next bazaar update
+    /// </summary>
+    /// <param name="update"></param>
+    /// <returns></returns>
+    /// <exception cref="NotImplementedException"></exception>
+    internal Task BazaarUpdate(BazaarPull update)
     {
-        if (flip.Timestamp == default)
-        {
-            flip.Timestamp = DateTime.Now;
-        }
-        db.Flips.Add(flip);
-        await db.SaveChangesAsync();
-        return flip;
+        throw new NotImplementedException();
+    }
+
+    /// <summary>
+    /// Returns all flips available
+    /// </summary>
+    /// <returns></returns>
+    /// <exception cref="NotImplementedException"></exception>
+    internal Task<Flip> GetFlips()
+    {
+        throw new NotImplementedException();
+    }
+
+    /// <summary>
+    /// Returns the price history of an item.
+    /// Longer time frames will return less data points (grouped together).
+    /// </summary>
+    /// <param name="itemId"></param>
+    /// <param name="start"></param>
+    /// <param name="end"></param>
+    /// <returns></returns>
+    private async Task<List<Client.Model.GraphResult>> GetItemPriceHistory(string itemId, DateTime? start = null, DateTime? end = null)
+    {
+        return await client.ApiBazaarItemIdHistoryGetAsync(itemId, start, end);
     }
 }

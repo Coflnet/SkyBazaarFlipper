@@ -1,30 +1,29 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Coflnet.Sky.Base.Models;
+using Coflnet.Sky.Bazaar.Flipper.Models;
 using System;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
 using System.Collections;
 using System.Collections.Generic;
-using Coflnet.Sky.Base.Services;
+using Coflnet.Sky.Bazaar.Flipper.Services;
 
-namespace Coflnet.Sky.Base.Controllers;
+namespace Coflnet.Sky.Bazaar.Flipper.Controllers;
 
 /// <summary>
 /// Main Controller handling tracking
 /// </summary>
 [ApiController]
 [Route("[controller]")]
-public class BaseController : ControllerBase
+public class BazaarFlipperController : ControllerBase
 {
-    private readonly BaseService service;
+    private readonly BazaarFlipperService service;
 
     /// <summary>
-    /// Creates a new instance of <see cref="BaseController"/>
+    /// Creates a new instance of <see cref="BazaarFlipperController"/>
     /// </summary>
     /// <param name="service"></param>
-    public BaseController(BaseService service)
+    public BazaarFlipperController(BazaarFlipperService service)
     {
         this.service = service;
     }
@@ -32,14 +31,11 @@ public class BaseController : ControllerBase
     /// <summary>
     /// Tracks a flip
     /// </summary>
-    /// <param name="flip"></param>
-    /// <param name="AuctionId"></param>
     /// <returns></returns>
-    [HttpPost]
-    [Route("flip/{AuctionId}")]
-    public async Task<Flip> TrackFlip([FromBody] Flip flip, string AuctionId)
+    [HttpGet]
+    [Route("/flips")]
+    public async Task<Flip> GetFlips()
     {
-        await service.AddFlip(flip);
-        return flip;
+        return await service.GetFlips();
     }
 }
