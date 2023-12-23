@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 namespace Coflnet.Sky.Bazaar.Flipper.Services;
 public class BazaarFlipperService
 {
+    private const double AverageuserFees = 0.0125;
     private IBazaarApi client;
     private Dictionary<string, BazaarFlip> flips = new Dictionary<string, BazaarFlip>();
     private ILogger<BazaarFlipperService> logger;
@@ -42,17 +43,20 @@ public class BazaarFlipperService
             var spread = status.BuyPrice - status.SellPrice;
             var coinsPerWeek = volume * spread;
             var coinsPerHour = coinsPerWeek / 168;
+            var hourlyVolume = (double)volume / 168;
+            var fees = status.BuyPrice * AverageuserFees * hourlyVolume;
             flips[item.ProductId] = new BazaarFlip
             {
                 ItemTag = item.ProductId,
                 BuyPrice = status.BuyPrice,
                 SellPrice = status.SellPrice,
                 ProfitPerHour = coinsPerHour,
+                EstimatedFees = fees,
                 Volume = volume,
                 Timestamp = DateTime.UtcNow
             };
         }
-        foreach (var item in flips.Values.OrderByDescending(v => v.ProfitPerHour).Take(50))
+        foreach (var item in flips.Values.OrderByDescending(v => v.ProfitPerHour - v.EstimatedFees).Take(100))
         {
             var history = await GetItemPriceHistory(item.ItemTag, DateTime.UtcNow.AddDays(-7));
             var medianBuyPrice = history.Select(h => h.Buy).OrderByDescending(b => b).ElementAt(history.Count / 2);
@@ -68,7 +72,7 @@ public class BazaarFlipperService
     /// <exception cref="NotImplementedException"></exception>
     internal Task<List<BazaarFlip>> GetFlips()
     {
-        return Task.FromResult(flips.Values.OrderByDescending(v => v.ProfitPerHour).ToList());
+        return Task.FromResult(flips.Values.OrderByDescending(v => v.ProfitPerHour - v.EstimatedFees).ToList());
     }
 
     /// <summary>
