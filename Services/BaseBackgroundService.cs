@@ -43,8 +43,13 @@ public class BazaarFlipperBackgroundService : BackgroundService
                 await service.BazaarUpdate(lp);
             }
             consumeCount.Inc(batch.Count());
-        }, stoppingToken, "sky-bazaar-flipper");
+        }, stoppingToken, "sky-bazaar-flipper+" + GetHostName(), 5, AutoOffsetReset.Latest);
         logger.LogInformation("Started Bazaar Flipper Background Service");
         await Task.WhenAll(flipCons);
+    }
+
+    private string GetHostName()
+    {
+        return System.Net.Dns.GetHostName();
     }
 }
