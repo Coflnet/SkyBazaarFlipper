@@ -52,7 +52,7 @@ public class BazaarFlipperService
                 Timestamp = DateTime.UtcNow
             };
         }
-        foreach (var item in flips.Values.OrderByDescending(v => v.ProfitPerHour).Take(20))
+        foreach (var item in flips.Values.OrderByDescending(v => v.ProfitPerHour).Take(50))
         {
             var history = await GetItemPriceHistory(item.ItemTag, DateTime.UtcNow.AddDays(-7));
             var medianBuyPrice = history.Select(h => h.Buy).OrderByDescending(b => b).ElementAt(history.Count / 2);
