@@ -5,15 +5,20 @@ using System.Linq;
 using dev;
 using Coflnet.Sky.Bazaar.Client.Api;
 using System.Collections.Generic;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace Coflnet.Sky.Bazaar.Flipper.Services;
 public class BazaarFlipperService
 {
     private IBazaarApi client;
+    private Dictionary<string, BazaarFlip> flips = new Dictionary<string, BazaarFlip>();
+    private ILogger<BazaarFlipperService> logger;
 
-    public BazaarFlipperService(IBazaarApi client)
+    public BazaarFlipperService(IBazaarApi client, ILogger<BazaarFlipperService> logger)
     {
         this.client = client;
+        this.logger = logger;
     }
 
     /// <summary>
@@ -23,9 +28,29 @@ public class BazaarFlipperService
     /// <param name="update"></param>
     /// <returns></returns>
     /// <exception cref="NotImplementedException"></exception>
-    internal Task BazaarUpdate(BazaarPull update)
+    internal async Task BazaarUpdate(BazaarPull update)
     {
-        throw new NotImplementedException();
+        foreach (var item in update.Products)
+        {
+            var status = item.QuickStatus;
+            var volume = Math.Min(status.BuyMovingWeek, status.SellMovingWeek);
+            if(volume == 0)
+            {
+                continue;
+            }
+            var spread = status.BuyPrice - status.SellPrice;
+            var coinsPerWeek = volume * spread;
+            var coinsPerHour = coinsPerWeek / 168;
+            flips[item.ProductId] = new BazaarFlip
+            {
+                ItemTag = item.ProductId,
+                BuyPrice = status.BuyPrice,
+                SellPrice = status.SellPrice,
+                ProfitPerHour = coinsPerHour,
+                Timestamp = DateTime.UtcNow
+            };
+        }
+        logger.LogInformation($"Updated {update.Products.Count} flips");
     }
 
     /// <summary>
@@ -33,9 +58,9 @@ public class BazaarFlipperService
     /// </summary>
     /// <returns></returns>
     /// <exception cref="NotImplementedException"></exception>
-    internal Task<Flip> GetFlips()
+    internal Task<List<BazaarFlip>> GetFlips()
     {
-        throw new NotImplementedException();
+        return Task.FromResult(flips.Values.OrderByDescending(v => v.ProfitPerHour).ToList());
     }
 
     /// <summary>

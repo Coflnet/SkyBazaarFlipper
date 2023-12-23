@@ -44,7 +44,7 @@ public class BazaarFlipperBackgroundService : BackgroundService
             }
             consumeCount.Inc(batch.Count());
         }, stoppingToken, "sky-bazaar-flipper");
-
+        logger.LogInformation("Started Bazaar Flipper Background Service");
         await Task.WhenAll(flipCons);
     }
 }

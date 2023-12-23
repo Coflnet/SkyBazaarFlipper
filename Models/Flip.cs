@@ -5,14 +5,12 @@ using System.Text.Json.Serialization;
 
 namespace Coflnet.Sky.Bazaar.Flipper.Models;
 [DataContract]
-public class Flip
+public class BazaarFlip
 {
-    [IgnoreDataMember]
-    [JsonIgnore]
-    public int Id { get; set; }
-    public int AuctionId { get; set; }
+    public string ItemTag { get; set; }
 
-    [System.ComponentModel.DataAnnotations.Timestamp]
-    [DataMember(Name = "timestamp")]
+    public double BuyPrice { get; set; }
+    public double SellPrice { get; set; }
+    public double ProfitPerHour { get; set; }
     public DateTime Timestamp { get; set; }
 }

@@ -6,7 +6,7 @@ namespace Coflnet.Sky.Bazaar.Flipper.Models;
 /// </summary>
 public class BazaarFlipperDbContext : DbContext
 {
-    public DbSet<Flip> Flips { get; set; }
+    public DbSet<BazaarFlip> Flips { get; set; }
 
     /// <summary>
     /// Creates a new instance of <see cref="BazaarFlipperDbContext"/>
@@ -25,9 +25,5 @@ public class BazaarFlipperDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<Flip>(entity =>
-        {
-            entity.HasIndex(e => new { e.AuctionId });
-        });
     }
 }

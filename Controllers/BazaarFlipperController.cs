@@ -34,7 +34,7 @@ public class BazaarFlipperController : ControllerBase
     /// <returns></returns>
     [HttpGet]
     [Route("/flips")]
-    public async Task<Flip> GetFlips()
+    public async Task<List<BazaarFlip>> GetFlips()
     {
         return await service.GetFlips();
     }
