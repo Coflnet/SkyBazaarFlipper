@@ -14,7 +14,7 @@
     <DefaultItemExcludes>$(DefaultItemExcludes);Client\**\*</DefaultItemExcludes>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Coflnet.Sky.Bazaar.Client" Version="0.3.0" />
+    <PackageReference Include="Coflnet.Sky.Bazaar.Client" Version="0.3.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>

@@ -12,5 +12,7 @@ public class BazaarFlip
     public double BuyPrice { get; set; }
     public double SellPrice { get; set; }
     public double ProfitPerHour { get; set; }
+    public long Volume { get; set; }
     public DateTime Timestamp { get; set; }
+    public double MedianBuyPrice { get; internal set; }
 }

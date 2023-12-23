@@ -34,10 +34,11 @@ public class BazaarFlipperService
         {
             var status = item.QuickStatus;
             var volume = Math.Min(status.BuyMovingWeek, status.SellMovingWeek);
-            if(volume == 0)
+            if (volume == 0)
             {
                 continue;
             }
+            // fees are deducted when displaying since they can differ between players
             var spread = status.BuyPrice - status.SellPrice;
             var coinsPerWeek = volume * spread;
             var coinsPerHour = coinsPerWeek / 168;
@@ -47,8 +48,15 @@ public class BazaarFlipperService
                 BuyPrice = status.BuyPrice,
                 SellPrice = status.SellPrice,
                 ProfitPerHour = coinsPerHour,
+                Volume = volume,
                 Timestamp = DateTime.UtcNow
             };
+        }
+        foreach (var item in flips.Values.OrderByDescending(v => v.ProfitPerHour).Take(20))
+        {
+            var history = await GetItemPriceHistory(item.ItemTag, DateTime.UtcNow.AddDays(-7));
+            var medianBuyPrice = history.Select(h => h.Buy).OrderByDescending(b => b).ElementAt(history.Count / 2);
+            item.MedianBuyPrice = medianBuyPrice;
         }
         logger.LogInformation($"Updated {update.Products.Count} flips");
     }
