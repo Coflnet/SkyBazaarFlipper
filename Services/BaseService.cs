@@ -59,9 +59,16 @@ public class BazaarFlipperService
         }
         foreach (var item in flips.Values.OrderByDescending(v => v.ProfitPerHour - v.EstimatedFees).Take(100))
         {
-            var history = await GetItemPriceHistory(item.ItemTag, DateTime.UtcNow.AddDays(-7));
-            var medianBuyPrice = history.Select(h => h.Buy).OrderByDescending(b => b).ElementAt(history.Count / 2);
-            item.MedianBuyPrice = medianBuyPrice;
+            try
+            {
+                var history = await GetItemPriceHistory(item.ItemTag, DateTime.UtcNow.AddDays(-7));
+                var medianBuyPrice = history.Select(h => h.Buy).OrderByDescending(b => b).ElementAt(history.Count / 2);
+                item.MedianBuyPrice = medianBuyPrice;
+            }
+            catch (System.Exception e)
+            {
+                logger.LogError(e, $"Failed to get price history for {item.ItemTag}");
+            }
         }
         logger.LogInformation($"Updated {update.Products.Count} flips");
         lastUpdate = update.Timestamp;
