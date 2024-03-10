@@ -38,4 +38,11 @@ public class BazaarFlipperController : ControllerBase
     {
         return await service.GetFlips();
     }
+
+    [HttpGet]
+    [Route("/ready")]
+    public bool Ready()
+    {
+        return service.Ready();
+    }
 }

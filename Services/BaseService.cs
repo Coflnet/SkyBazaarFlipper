@@ -15,6 +15,7 @@ public class BazaarFlipperService
     private IBazaarApi client;
     private Dictionary<string, BazaarFlip> flips = new Dictionary<string, BazaarFlip>();
     private ILogger<BazaarFlipperService> logger;
+    private DateTime lastUpdate = DateTime.MinValue;
 
     public BazaarFlipperService(IBazaarApi client, ILogger<BazaarFlipperService> logger)
     {
@@ -63,6 +64,7 @@ public class BazaarFlipperService
             item.MedianBuyPrice = medianBuyPrice;
         }
         logger.LogInformation($"Updated {update.Products.Count} flips");
+        lastUpdate = update.Timestamp;
     }
 
     /// <summary>
@@ -86,5 +88,10 @@ public class BazaarFlipperService
     private async Task<List<Client.Model.GraphResult>> GetItemPriceHistory(string itemId, DateTime? start = null, DateTime? end = null)
     {
         return await client.ApiBazaarItemIdHistoryGetAsync(itemId, start, end);
+    }
+
+    public bool Ready()
+    {
+        return lastUpdate > DateTime.UtcNow.AddMinutes(-5);
     }
 }
