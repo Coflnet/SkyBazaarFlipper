@@ -39,7 +39,8 @@ public class Startup
         services.AddHostedService<BazaarFlipperBackgroundService>();
         services.AddJaeger(Configuration);
         services.AddSingleton<BazaarFlipperService>();
-        services.AddSingleton<Bazaar.Client.Api.IBazaarApi>(new Bazaar.Client.Api.BazaarApi(Configuration["BAZAAR_BASE_URL"]));
+        services.AddSingleton<BookFlipService>();
+        services.AddSingleton<Client.Api.IBazaarApi>(new Client.Api.BazaarApi(Configuration["BAZAAR_BASE_URL"]));
         services.AddResponseCaching();
         services.AddResponseCompression();
     }

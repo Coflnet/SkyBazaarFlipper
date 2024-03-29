@@ -1,0 +1,68 @@
+using Microsoft.Playwright;
+using Newtonsoft.Json;
+
+using var playwright = await Playwright.CreateAsync();
+await using var browser = await playwright.Chromium.LaunchAsync();
+var page = await browser.NewPageAsync();
+await page.GotoAsync("https://hypixel-skyblock.fandom.com/wiki/Enchantments");
+
+var nameDivs = await page.QuerySelectorAllAsync(".enchnamediv");
+var enchantNames = new List<(string, int)>();
+foreach (var element in nameDivs)
+{
+    var text = await element.TextContentAsync();
+    var parts = text.Split("Lvl: ");
+    if (parts.Length == 2 && int.TryParse(parts[1], out var level))
+        enchantNames.Add((parts[0], level));
+    else
+        enchantNames.Add((text, 0));
+    // get 4th parent next element in the DOM
+}
+// matching all of .wikitable .centertext .article-enchantments-table
+var levelTable = await page.QuerySelectorAllAsync(".wikitable.centertext.article-enchantments-table");
+var fullSourceList = new List<(int highestLevel, List<(int count, List<string>)>)>();
+foreach (var element in levelTable)
+{
+    var childComponents = await element.QuerySelectorAllAsync("tr");
+    var totalCount = (await childComponents[0].QuerySelectorAllAsync("th")).Count;
+    var targetrow = childComponents[2];
+    var columns = await targetrow.QuerySelectorAllAsync("td");
+    var enchSources = new List<(int, List<string>)>();
+    foreach (var item in columns)
+    {
+        var colSpan = await item.GetAttributeAsync("colspan");
+        // all elements
+        var sources = await item.QuerySelectorAllAsync("a");
+        var sourceList = new List<string>();
+        foreach (var source in sources)
+        {
+            var sourceText = await source.TextContentAsync();
+            if (string.IsNullOrEmpty(sourceText))
+                continue;
+            sourceList.Add(sourceText);
+        }
+        if (sourceList.Count == 0)
+            sourceList.Add(await item.TextContentAsync());
+        enchSources.Add((int.Parse(colSpan), sourceList));
+    }
+    fullSourceList.Add((totalCount, enchSources));
+}
+var comined = enchantNames.Zip(fullSourceList, (name, sources) => new { name = name.Item1, LevelNeeded = name.Item2, sources });
+var lookup = comined.GroupBy(x => x.name).Select(x => x.First()).ToDictionary(x => x.name, v =>
+{
+    var levelLookup = new Dictionary<int, List<string>>();
+    var offset = 0;
+    foreach (var item in v.sources.Item2)
+    {
+        for (int i = 0; i < item.count; i++)
+        {
+            levelLookup[offset + 1] = item.Item2;
+            offset++;
+            if (offset == v.sources.Item1)
+                break;
+        }
+    }
+
+    return levelLookup;
+});
+File.WriteAllText("enchantments.json", JsonConvert.SerializeObject(lookup, Formatting.Indented));

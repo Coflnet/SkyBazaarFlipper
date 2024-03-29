@@ -18,14 +18,16 @@ namespace Coflnet.Sky.Bazaar.Flipper.Controllers;
 public class BazaarFlipperController : ControllerBase
 {
     private readonly BazaarFlipperService service;
+    private readonly BookFlipService bookFlipService;
 
     /// <summary>
     /// Creates a new instance of <see cref="BazaarFlipperController"/>
     /// </summary>
     /// <param name="service"></param>
-    public BazaarFlipperController(BazaarFlipperService service)
+    public BazaarFlipperController(BazaarFlipperService service, BookFlipService bookFlipService)
     {
         this.service = service;
+        this.bookFlipService = bookFlipService;
     }
 
     /// <summary>
@@ -37,6 +39,16 @@ public class BazaarFlipperController : ControllerBase
     public async Task<List<BazaarFlip>> GetFlips()
     {
         return await service.GetFlips();
+    }
+
+    /// <summary>
+    /// Gets book flips
+    /// </summary>
+    [HttpGet]
+    [Route("/books")]
+    public async Task<List<BookFlip>> GetBooks()
+    {
+        return await bookFlipService.GetFlips();
     }
 
     [HttpGet]

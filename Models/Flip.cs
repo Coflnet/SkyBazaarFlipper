@@ -17,3 +17,13 @@ public class BazaarFlip
     public DateTime Timestamp { get; set; }
     public double MedianBuyPrice { get; internal set; }
 }
+
+public class BookFlip
+{
+    public string StartTag { get; set; }
+    public string EndTag { get; set; }
+    public double ProfitPerHour { get; set; }
+    public long HourlyVolume { get; set; }
+    public double EstimatedFees { get; set; }
+    public DateTime Timestamp { get; set; }
+}

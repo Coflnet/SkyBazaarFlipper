@@ -1,15 +1,11 @@
 using System.Threading;
 using System.Threading.Tasks;
-using Coflnet.Sky.Bazaar.Flipper.Models;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Confluent.Kafka;
 using Microsoft.Extensions.Configuration;
 using System.Linq;
 using Microsoft.Extensions.Logging;
-using Coflnet.Sky.Bazaar.Flipper.Controllers;
-using Coflnet.Sky.Core;
 
 namespace Coflnet.Sky.Bazaar.Flipper.Services;
 
@@ -34,13 +30,15 @@ public class BazaarFlipperBackgroundService : BackgroundService
     /// <returns></returns>
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        var flipCons = Coflnet.Kafka.KafkaConsumer.ConsumeBatch<dev.BazaarPull>(config, config["TOPICS:BAZAAR"], async batch =>
+        var flipCons = Kafka.KafkaConsumer.ConsumeBatch<dev.BazaarPull>(config, config["TOPICS:BAZAAR"], async batch =>
         {
             using var scope = scopeFactory.CreateScope();
             var service = scope.ServiceProvider.GetRequiredService<BazaarFlipperService>();
+            var bookService = scope.ServiceProvider.GetRequiredService<BookFlipService>();
             foreach (var lp in batch)
             {
                 await service.BazaarUpdate(lp);
+                await bookService.BookUpdate(lp);
             }
             consumeCount.Inc(batch.Count());
         }, stoppingToken, "sky-bazaar-flipper+" + GetHostName(), 5, AutoOffsetReset.Latest);

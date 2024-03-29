@@ -1,0 +1,1835 @@
+{
+    "Bane of Arthropods": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Spider Slayer IV"
+        ],
+        "7": [
+            "Experiments"
+        ]
+    },
+    "Champion": {
+        "1": [
+            "Community Center",
+            "Bits"
+        ],
+        "2": [
+            "50KXP"
+        ],
+        "3": [
+            "100kXP"
+        ],
+        "4": [
+            "250kXP"
+        ],
+        "5": [
+            "500kXP"
+        ],
+        "6": [
+            "1mXP"
+        ],
+        "7": [
+            "1.5mXP"
+        ],
+        "8": [
+            "2mXP"
+        ],
+        "9": [
+            "2.5mXP"
+        ],
+        "10": [
+            "3mXP"
+        ]
+    },
+    "Cleave": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Experiments"
+        ]
+    },
+    "Critical": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Wolf Slayer IV"
+        ],
+        "7": [
+            "Experiments"
+        ]
+    },
+    "Cubism": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Experiments"
+        ]
+    },
+    "Divine Gift": {
+        "1": [
+            "Regalia Room",
+            "coins"
+        ],
+        "2": [
+            "Regalia Room",
+            "coins"
+        ],
+        "3": [
+            "Regalia Room",
+            "coins"
+        ]
+    },
+    "Dragon Hunter": {
+        "1": [
+            "Pearl Dealer"
+        ],
+        "2": [
+            "Pearl Dealer"
+        ],
+        "3": [
+            "Pearl Dealer"
+        ],
+        "4": [
+            "Pearl Dealer"
+        ],
+        "5": [
+            "Pearl Dealer"
+        ]
+    },
+    "Ender Slayer": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Pearl Dealer"
+        ],
+        "7": [
+            "Experiments",
+            "Enderman Slayer VII"
+        ]
+    },
+    "Execute": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Experiments"
+        ]
+    },
+    "Experience": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Joyful Viking"
+        ],
+        "5": [
+            "Frozen Alex"
+        ]
+    },
+    "Fire Aspect": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Blaze Slayer V"
+        ]
+    },
+    "First Strike": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Experiments"
+        ]
+    },
+    "Giant Killer": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Experiments",
+            "Dark Auction"
+        ],
+        "7": [
+            "Experiments",
+            "Darker Auction"
+        ]
+    },
+    "Impaling": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ]
+    },
+    "Knockback": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ]
+    },
+    "Lethality": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Experiments",
+            "Dungeon Post-Boss Chest",
+            "Catacombs Floor V"
+        ]
+    },
+    "Life Steal": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Fear Mongerer"
+        ],
+        "5": [
+            "Experiments"
+        ]
+    },
+    "Looting": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Gifts"
+        ],
+        "5": [
+            "Experiments"
+        ]
+    },
+    "Luck": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Gifts"
+        ],
+        "7": [
+            "Experiments"
+        ]
+    },
+    "Mana Steal": {
+        "1": [
+            "Enderman Slayer II"
+        ],
+        "2": [
+            "Enderman Slayer II"
+        ],
+        "3": [
+            "Enderman Slayer II"
+        ]
+    },
+    "Prosecute": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Experiments"
+        ]
+    },
+    "Scavenger": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Gifts"
+        ],
+        "5": [
+            "Experiments",
+            "Tomioka",
+            "coins"
+        ]
+    },
+    "Sharpness": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Dark Auction",
+            "Tomioka",
+            "coins"
+        ],
+        "7": [
+            "Darker Auction"
+        ]
+    },
+    "Smite": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Zombie Slayer IV"
+        ],
+        "7": [
+            "Tomioka",
+            "coins",
+            "Zombie Slayer VII"
+        ]
+    },
+    "Smoldering": {
+        "1": [
+            "Smoldering Blaze"
+        ],
+        "2": [
+            "Smoldering Blaze"
+        ],
+        "3": [
+            "Smoldering Blaze"
+        ],
+        "4": [
+            "Smoldering Blaze"
+        ],
+        "5": [
+            "Smoldering Blaze"
+        ]
+    },
+    "Syphon": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Experiments"
+        ],
+        "5": [
+            "Experiments"
+        ]
+    },
+    "Tabasco": {
+        "1": [
+            "?"
+        ],
+        "2": [
+            "Chili Pepper IX"
+        ],
+        "3": [
+            "Combining Tabasco II Books"
+        ]
+    },
+    "Thunderbolt": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Experiments"
+        ]
+    },
+    "Thunderlord": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "The Watcher",
+            "Catacombs Floor V"
+        ],
+        "7": [
+            "Master Mode"
+        ]
+    },
+    "Titan Killer": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Experiments"
+        ],
+        "7": [
+            "Experiments"
+        ]
+    },
+    "Triple-Strike": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ]
+    },
+    "Vampirism": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Spooky Festival",
+            "Trick or Treat Chest"
+        ]
+    },
+    "Venomous": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Experiments"
+        ]
+    },
+    "Vicious": {
+        "1": [
+            "Dark Auction"
+        ],
+        "2": [
+            "Dark Auction"
+        ],
+        "3": [
+            "Dark Auction"
+        ]
+    },
+    "Chance": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Experiments"
+        ],
+        "5": [
+            "Experiments"
+        ]
+    },
+    "Dragon Tracer": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ]
+    },
+    "Flame": {
+        "1": [
+            "Enchantment Table"
+        ]
+    },
+    "Infinite Quiver": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Dungeon Loot Chest",
+            "[note 1]"
+        ],
+        "7": [
+            "Dungeon Loot Chest",
+            "[note 1]"
+        ],
+        "8": [
+            "Combining Books"
+        ],
+        "9": [
+            "Combining Books"
+        ],
+        "10": [
+            "Combining Books"
+        ]
+    },
+    "Piercing": {
+        "1": [
+            "Enchantment Table",
+            "Cactus VI"
+        ]
+    },
+    "Overload": {
+        "1": [
+            "Dungeon Post-Boss Chest",
+            "The Catacombs - Floor V"
+        ],
+        "2": [
+            "Dungeon Post-Boss Chest",
+            "The Catacombs - Floor V"
+        ],
+        "3": [
+            "Dungeon Post-Boss Chest",
+            "The Catacombs - Floor V"
+        ],
+        "4": [
+            "Dungeon Post-Boss Chest",
+            "The Catacombs - Floor V"
+        ],
+        "5": [
+            "Dungeon Post-Boss Chest",
+            "The Catacombs - Floor V"
+        ]
+    },
+    "Power": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Dark Auction"
+        ],
+        "7": [
+            "Dark Auction"
+        ]
+    },
+    "Punch": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ]
+    },
+    "Snipe": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Experiments"
+        ]
+    },
+    "Aqua Affinity": {
+        "1": [
+            "Enchantment Table"
+        ]
+    },
+    "Big Brain": {
+        "1": [
+            "Darker Auction"
+        ],
+        "2": [
+            "Darker Auction"
+        ],
+        "3": [
+            "Darker Auction"
+        ]
+    },
+    "Blast Protection": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Experiments"
+        ],
+        "7": [
+            "Experiments"
+        ]
+    },
+    "Counter-Strike": {
+        "1": [
+            "Dark Auction",
+            "Scorpius"
+        ]
+    },
+    "Depth Strider": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ]
+    },
+    "Feather Falling": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Dungeon Loot Chest"
+        ],
+        "7": [
+            "Combining Feather Falling VI books"
+        ],
+        "8": [
+            "Combining Feather Falling VI books"
+        ],
+        "9": [
+            "Combining Feather Falling VI books"
+        ],
+        "10": [
+            "Combining Feather Falling VI books"
+        ],
+        "11": [
+            "Spring Boots"
+        ]
+    },
+    "Ferocious Mana": {
+        "1": [
+            "Kuudra"
+        ],
+        "2": [
+            "Kuudra"
+        ],
+        "3": [
+            "Kuudra"
+        ],
+        "4": [
+            "Kuudra"
+        ],
+        "5": [
+            "Kuudra"
+        ],
+        "6": [
+            "Kuudra"
+        ],
+        "7": [
+            "Kuudra"
+        ],
+        "8": [
+            "Kuudra"
+        ],
+        "9": [
+            "Kuudra"
+        ],
+        "10": [
+            "Kuudra"
+        ]
+    },
+    "Fire Protection": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Experiments"
+        ],
+        "7": [
+            "Experiments"
+        ]
+    },
+    "Frost Walker": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ]
+    },
+    "Great Spook": {
+        "1": [
+            "Tyashoi Alchemist"
+        ]
+    },
+    "Growth": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Experiments",
+            "Dark Auction"
+        ],
+        "7": [
+            "Experiments",
+            "Darker Auction"
+        ]
+    },
+    "Hardened Mana": {
+        "1": [
+            "Kuudra"
+        ],
+        "2": [
+            "Kuudra"
+        ],
+        "3": [
+            "Kuudra"
+        ],
+        "4": [
+            "Kuudra"
+        ],
+        "5": [
+            "Kuudra"
+        ],
+        "6": [
+            "Kuudra"
+        ],
+        "7": [
+            "Kuudra"
+        ],
+        "8": [
+            "Kuudra"
+        ],
+        "9": [
+            "Kuudra"
+        ],
+        "10": [
+            "Kuudra"
+        ]
+    },
+    "Hecatomb": {
+        "1": [
+            "Community Center",
+            "Bits"
+        ],
+        "2": [
+            "2 S runs"
+        ],
+        "3": [
+            "5 S runs"
+        ],
+        "4": [
+            "10 S runs"
+        ],
+        "5": [
+            "20 S runs"
+        ],
+        "6": [
+            "30 S runs"
+        ],
+        "7": [
+            "40 S runs"
+        ],
+        "8": [
+            "60 S runs"
+        ],
+        "9": [
+            "80 S runs"
+        ],
+        "10": [
+            "100 S runs"
+        ]
+    },
+    "Mana Vampire": {
+        "1": [
+            "Kuudra"
+        ],
+        "2": [
+            "Kuudra"
+        ],
+        "3": [
+            "Kuudra"
+        ],
+        "4": [
+            "Kuudra"
+        ],
+        "5": [
+            "Kuudra"
+        ],
+        "6": [
+            "Kuudra"
+        ],
+        "7": [
+            "Kuudra"
+        ],
+        "8": [
+            "Kuudra"
+        ],
+        "9": [
+            "Kuudra"
+        ],
+        "10": [
+            "Kuudra"
+        ]
+    },
+    "Pesterminator": {
+        "1": [
+            "Beetles"
+        ],
+        "2": [
+            "Combining Books"
+        ],
+        "3": [
+            "Combining Books"
+        ],
+        "4": [
+            "Combining Books"
+        ],
+        "5": [
+            "Combining Books"
+        ]
+    },
+    "Projectile Protection": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Experiments"
+        ],
+        "7": [
+            "Experiments"
+        ]
+    },
+    "Protection": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Experiments",
+            "Tomioka",
+            "Dark Auction"
+        ],
+        "7": [
+            "Experiments",
+            "Darker Auction"
+        ]
+    },
+    "Reflection": {
+        "1": [
+            "Rift Mirrorverse"
+        ],
+        "2": [
+            "Rift Mirrorverse"
+        ],
+        "3": [
+            "Rift Mirrorverse"
+        ],
+        "4": [
+            "Rift Mirrorverse"
+        ],
+        "5": [
+            "Rift Mirrorverse"
+        ]
+    },
+    "Rejuvenate": {
+        "1": [
+            "Dungeons Loot Chest"
+        ],
+        "2": [
+            "Dungeons Loot Chest"
+        ],
+        "3": [
+            "Dungeons Loot Chest"
+        ],
+        "4": [
+            "Dungeons Loot Chest"
+        ],
+        "5": [
+            "Dungeons Loot Chest"
+        ]
+    },
+    "Respiration": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ]
+    },
+    "Respite": {
+        "1": [
+            "Experiments"
+        ],
+        "2": [
+            "Experiments"
+        ],
+        "3": [
+            "Experiments"
+        ],
+        "4": [
+            "Experiments"
+        ],
+        "5": [
+            "Experiments"
+        ]
+    },
+    "Smarty Pants": {
+        "1": [
+            "Enderman Slayer V"
+        ],
+        "2": [
+            "Enderman Slayer V"
+        ],
+        "3": [
+            "Enderman Slayer V"
+        ],
+        "4": [
+            "Enderman Slayer V"
+        ],
+        "5": [
+            "Enderman Slayer V"
+        ]
+    },
+    "Strong Mana": {
+        "1": [
+            "Kuudra"
+        ],
+        "2": [
+            "Kuudra"
+        ],
+        "3": [
+            "Kuudra"
+        ],
+        "4": [
+            "Kuudra"
+        ],
+        "5": [
+            "Kuudra"
+        ],
+        "6": [
+            "Kuudra"
+        ],
+        "7": [
+            "Kuudra"
+        ],
+        "8": [
+            "Kuudra"
+        ],
+        "9": [
+            "Kuudra"
+        ],
+        "10": [
+            "Kuudra"
+        ]
+    },
+    "Sugar Rush": {
+        "1": [
+            "Fear Mongerer"
+        ],
+        "2": [
+            "Fear Mongerer"
+        ],
+        "3": [
+            "Fear Mongerer"
+        ]
+    },
+    "Thorns": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ]
+    },
+    "Transylvanian": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [
+            "(IV) Crafting"
+        ],
+        "5": [
+            "(IV) Crafting"
+        ]
+    },
+    "True Protection": {
+        "1": [
+            "Old Shaman Nyko",
+            "coins"
+        ]
+    },
+    "Cayenne": {
+        "1": [
+            "Unobtainable"
+        ],
+        "2": [
+            "Unobtainable"
+        ],
+        "3": [
+            "Unobtainable"
+        ],
+        "4": [
+            "Chili Pepper V"
+        ],
+        "5": [
+            "Combining Cayenne IV Books"
+        ]
+    },
+    "Green Thumb": {
+        "1": [
+            "SkyMart"
+        ],
+        "2": [
+            "Combining books"
+        ],
+        "3": [
+            "Combining books"
+        ],
+        "4": [
+            "Combining books"
+        ],
+        "5": [
+            "Combining books"
+        ]
+    },
+    "Prosperity": {
+        "1": [
+            "Fishing"
+        ],
+        "2": [
+            "Combining books"
+        ],
+        "3": [
+            "Combining books"
+        ],
+        "4": [
+            "Combining books"
+        ],
+        "5": [
+            "Combining books"
+        ]
+    },
+    "Quantum": {
+        "1": [
+            "Unobtainable"
+        ],
+        "2": [
+            "Unobtainable"
+        ],
+        "3": [
+            "Riftstalker Bloodfiend"
+        ],
+        "4": [
+            "Combining books"
+        ],
+        "5": [
+            "Combining books"
+        ]
+    },
+    "Cultivating": {
+        "1": [
+            "Community Center",
+            "Bits"
+        ],
+        "2": [
+            "1kCrops"
+        ],
+        "3": [
+            "5kCrops"
+        ],
+        "4": [
+            "25kCrops"
+        ],
+        "5": [
+            "100kCrops"
+        ],
+        "6": [
+            "300kCrops"
+        ],
+        "7": [
+            "1.5mCrops"
+        ],
+        "8": [
+            "5mCrops"
+        ],
+        "9": [
+            "20mCrops"
+        ],
+        "10": [
+            "100mCrops"
+        ]
+    },
+    "Compact": {
+        "1": [
+            "Community Center",
+            "Bits"
+        ],
+        "2": [
+            "100Blocks"
+        ],
+        "3": [
+            "500Blocks"
+        ],
+        "4": [
+            "1.5kBlocks"
+        ],
+        "5": [
+            "5kBlocks"
+        ],
+        "6": [
+            "15kBlocks"
+        ],
+        "7": [
+            "50kBlocks"
+        ],
+        "8": [
+            "150kBlocks"
+        ],
+        "9": [
+            "500kBlocks"
+        ],
+        "10": [
+            "1mBlocks"
+        ]
+    },
+    "Dedication": {
+        "1": [
+            "SkyMart"
+        ],
+        "2": [
+            "Combining Books"
+        ],
+        "3": [
+            "Combining Books"
+        ],
+        "4": [
+            "visitor",
+            "Librarian"
+        ]
+    },
+    "Delicate": {
+        "1": [
+            "Anita",
+            "Silver Medals",
+            "Jacob's Ticket"
+        ]
+    },
+    "Efficiency": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Silex",
+            "Stonk"
+        ],
+        "7": [
+            "Silex"
+        ],
+        "8": [
+            "Silex"
+        ],
+        "9": [
+            "Silex"
+        ],
+        "10": [
+            "Silex"
+        ]
+    },
+    "Fortune": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Crystal Nucleus"
+        ]
+    },
+    "Harvesting": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Shiny Pigs"
+        ]
+    },
+    "Pristine": {
+        "1": [
+            "Gemstone VIII"
+        ],
+        "2": [
+            "Combining Books"
+        ],
+        "3": [
+            "Combining Books"
+        ],
+        "4": [
+            "Combining Books"
+        ],
+        "5": [
+            "Combining Books"
+        ]
+    },
+    "Rainbow": {
+        "1": [
+            "Enchantment Table",
+            "Mutton VI"
+        ]
+    },
+    "Replenish": {
+        "1": [
+            "Cocoa Beans VIII"
+        ]
+    },
+    "Silk Touch": {
+        "1": [
+            "Enchantment Table",
+            "String V"
+        ]
+    },
+    "Smelting Touch": {
+        "1": [
+            "Enchantment Table",
+            "Coal II"
+        ]
+    },
+    "Sunder": {
+        "1": [
+            "SkyMart"
+        ],
+        "2": [
+            "Combining Books"
+        ],
+        "3": [
+            "Combining Books"
+        ],
+        "4": [
+            "Combining Books"
+        ],
+        "5": [
+            "Combining Books"
+        ]
+    },
+    "Turbo-Crop": {
+        "1": [
+            "Jacob's Farming Contests",
+            "Librarian",
+            "visitor"
+        ],
+        "2": [
+            "Combining Books"
+        ],
+        "3": [
+            "Combining Books"
+        ],
+        "4": [
+            "Combining Books"
+        ],
+        "5": [
+            "Combining Books"
+        ]
+    },
+    "Angler": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Deep Sea Protector"
+        ]
+    },
+    "Blessing": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Sea Emperor"
+        ]
+    },
+    "Caster": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Carrot King"
+        ]
+    },
+    "Charm": {
+        "1": [
+            "Pyroclastic Worm"
+        ],
+        "2": [
+            "Combining Books"
+        ],
+        "3": [
+            "Combining Books"
+        ],
+        "4": [
+            "Combining Books"
+        ],
+        "5": [
+            "Combining Books"
+        ]
+    },
+    "Corruption": {
+        "1": [
+            "Fishing"
+        ],
+        "2": [
+            "Fishing"
+        ],
+        "3": [
+            "Fishing"
+        ],
+        "4": [
+            "Fishing"
+        ],
+        "5": [
+            "Fishing"
+        ]
+    },
+    "Expertise": {
+        "1": [
+            "Community Center",
+            "Bits"
+        ],
+        "2": [
+            "50"
+        ],
+        "3": [
+            "100"
+        ],
+        "4": [
+            "250"
+        ],
+        "5": [
+            "500"
+        ],
+        "6": [
+            "1k"
+        ],
+        "7": [
+            "2.5k"
+        ],
+        "8": [
+            "5.5k"
+        ],
+        "9": [
+            "10k"
+        ],
+        "10": [
+            "15k"
+        ]
+    },
+    "Frail": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Catfish"
+        ]
+    },
+    "Luck of the Sea": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Water Hydra"
+        ]
+    },
+    "Lure": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Guardian Defender"
+        ]
+    },
+    "Magnet": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Rider of the Deep"
+        ]
+    },
+    "Piscary": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Zombie Miner",
+            "Experiments"
+        ]
+    },
+    "Spiked Hook": {
+        "1": [
+            "Enchantment Table"
+        ],
+        "2": [
+            "Enchantment Table"
+        ],
+        "3": [
+            "Enchantment Table"
+        ],
+        "4": [
+            "Enchantment Table"
+        ],
+        "5": [
+            "Enchantment Table"
+        ],
+        "6": [
+            "Sea Leech"
+        ]
+    }
+}
